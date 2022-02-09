@@ -11,3 +11,5 @@ while True:
         pass
 
 print ("Precio original: {}. Precio con IVA: {}".format(precio, calcular_precio(precio)))
+
+Falta el apartado 2 !!!
