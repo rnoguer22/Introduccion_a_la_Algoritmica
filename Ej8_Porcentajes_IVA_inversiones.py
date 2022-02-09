@@ -5,7 +5,9 @@ def calcular_precio(precio):
 while True:
     precio = input("Introduzca el valor del precio: ")
     try:
-        float(precio) == True
+        precio = float(precio)
         break
     except:
         pass
+
+print ("Precio original: {}. Precio con IVA: {}".format(precio, calcular_precio(precio)))
