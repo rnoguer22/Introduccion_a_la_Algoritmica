@@ -1,7 +1,7 @@
 from cmath import inf
 
 
-class prima_anual:
+class Prima_Anual:
     def __init__(self, antiguedad, distancia, accidentes):
         self.antiguedad = antiguedad
         self.distancia = distancia
@@ -46,3 +46,6 @@ if __name__ == '__main__':
     accidentes = pedir_datos("accidentes")
     distancia = pedir_datos("distancia")
     antiguedad = pedir_datos("antiguedad")
+
+resultado = Prima_Anual(accidentes=accidentes, distancia=distancia, antiguedad=antiguedad)
+print (resultado)
