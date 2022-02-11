@@ -1,4 +1,5 @@
-class Prima_Anual:
+class Prima_Anual:   #Creamos la clase
+    #Constructor
     def __init__(self, antiguedad, distancia, accidentes):
         self.antiguedad = antiguedad
         self.distancia = distancia
@@ -18,7 +19,7 @@ class Prima_Anual:
     #Funcion que nos calcula la prima ponderada
     def ponderacion(self, prima_antiguedad, prima_distancia):
         prima = prima_antiguedad + prima_distancia
-        if self.accidentes < 3:
+        if self.accidentes <= 3:
             prima /= (self.accidentes+1)
         else:
             prima = 0
@@ -44,5 +45,8 @@ if __name__ == '__main__':
     distancia = pedir_datos("distancia")
     antiguedad = pedir_datos("antiguedad")
 
+#Definimos el resultado, que sera la unica instancia de clase
 resultado = Prima_Anual(accidentes=accidentes, distancia=distancia, antiguedad=antiguedad)
-print (resultado.ponderacion(resultado.prima_antiguedad(), resultado.prima_distancia()))
+#Imprimimos por pantalla la prima ponderada
+print ("La prima ponderada es: {}"
+    .format(resultado.ponderacion(resultado.prima_antiguedad(), resultado.prima_distancia())))
