@@ -8,3 +8,15 @@ class Media:
     #Funcion para calcular la media
     def media_no_ponderada(self):
         return (sum(self.num1, self.num2, self.num3))/3
+
+#Funcion para introducir los numeros por teclado
+def introducir_numero(i):
+    while True:
+        numero = input("Introduzca el {}º numero: ".format(i+1))
+        try:
+            numero = float(numero)
+            break
+        except:
+            print ("Introduzca un valor correcto por favor")
+            pass
+    return numero    
