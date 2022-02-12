@@ -14,7 +14,6 @@ def dame_datos(dato):
         numero = input("¿{}? ".format(dato))
         try:
             numero = float(numero)
-            numero > 0 == True
             break
         except:
             print ("Introduzca un valor correcto por favor")
@@ -22,7 +21,13 @@ def dame_datos(dato):
     return numero 
 
 
-if __name__ == '__main':
+if __name__ == '__main__':
     #Introducimos los datos por teclado
     lado = dame_datos("Lado")
     altura = dame_datos("Altura")
+
+    #Definimos resultado como una instancia de Triangulo
+    resultado = Triangulo(lado, altura)
+    print ("El area del triangulo es {}".format(resultado.area()))
+
+#Si el triangulo es rectangulo el area se calcula de la misma manera, solo que la altura coincidira con el otro cateto
