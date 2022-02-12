@@ -20,3 +20,15 @@ def introducir_numero(i):
             print ("Introduzca un valor correcto por favor")
             pass
     return numero    
+
+if __name__ == "__main__":
+
+    #Creamos una lista vacia donde se almacenaran los 3 numeros
+    r = []
+    for i in range(3):   #Bucle para introducir los numeros por teclado
+        num = introducir_numero(i)
+        r.append(num)
+    
+    resultado = Media(r[0], r[1], r[2])
+    print ("La media aritmetica de {}, {}, {} es {}".format(r[0], r[1], r[2], resultado.media_no_ponderada()))
+    
