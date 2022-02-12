@@ -7,7 +7,11 @@ class Media:
     
     #Funcion para calcular la media
     def media_no_ponderada(self):
-        return (sum(self.num1, self.num2, self.num3))/3
+        return (self.num1+self.num2+self.num3)/3
+    
+    def media_ponderada(self, media_no_ponderada):
+    #Vamos a redondear a las unidades, a partir del 0.5
+        return round(media_no_ponderada, 0)
 
 #Funcion para introducir los numeros por teclado
 def introducir_numero(i):
@@ -29,6 +33,8 @@ if __name__ == "__main__":
         num = introducir_numero(i)
         r.append(num)
     
+    #Definimos la variable resultado como una instancia de la clase Media
     resultado = Media(r[0], r[1], r[2])
+    #Mostramos por pantalla los resultados
     print ("La media aritmetica de {}, {}, {} es {}".format(r[0], r[1], r[2], resultado.media_no_ponderada()))
-    
+    print ("La media ponderada es {}".format(resultado.media_ponderada(resultado.media_no_ponderada())))
