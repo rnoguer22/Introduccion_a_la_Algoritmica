@@ -44,6 +44,7 @@ def introducir_horas_semana():
             pass
     return horas
 
+
 #Funcion para pedir al usuario el salario mensual bruto
 def introducir_sal_men_bruto():
     while True:
@@ -56,3 +57,15 @@ def introducir_sal_men_bruto():
             print ("Introduzca un valor correcto por favor")
             pass
     return salario
+
+
+if __name__ == "__main__":
+
+    #Introducimos los datos por teclado
+    salario_mensual_bruto = introducir_sal_men_bruto()
+    horas_semana = introducir_horas_semana()
+
+    #Definimos resultado como una instancia de clase y hallamos los salarios
+    resultado = Horas_Extra(salario_mensual_bruto, horas_semana)
+    print ("Su precio por hora bruto es: {}".format(resultado.precio_hora_bruto()))
+    print ("Su precio por hora remunerada es: {}".format(resultado.precio_hora_remunerada()))
