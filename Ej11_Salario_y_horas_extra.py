@@ -3,3 +3,9 @@
 #150% si x>43
 #Horas por semana (sin horas extra) = 35; 35x4 = 140 horas al mes
 #Resultado = salario mensual bruto x 12 / (horas por semana x52)
+
+class Horas_Extra:
+    #Constructor
+    def __init__(self, sal_men_bruto, horas_semana):
+        self.sal_men_bruto = sal_men_bruto
+        self.horas_semana = horas_semana
