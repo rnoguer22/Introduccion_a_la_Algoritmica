@@ -1,8 +1,3 @@
-#HORAS EXTRA
-#125% si 36<=x<=43
-#150% si x>43
-#Precio por hora bruto = salario mensual bruto x 12 / (horas por semana x52)
-
 #Funcion para calcular las horas extra de cada tipo
 def horas_remuneradas(horas_semana):
     if 36 <= horas_semana <= 43:
@@ -26,9 +21,9 @@ class Horas_Extra:
     
     #Funcion que devuelve el salario por hora remunerado
     def precio_hora_remunerada(self):
-        horas_125 = horas_remuneradas()[0]
-        horas_150 = horas_remuneradas()[1]
-        precio_final = self.precio_hora_bruto() * (horas_125*1.25 + horas_150*1.50)
+        horas_125 = horas_remuneradas(self.horas_semana)[0]
+        horas_150 = horas_remuneradas(self.horas_semana)[1]
+        precio_final = (35*self.precio_hora_bruto() + (horas_125*self.precio_hora_bruto()*1.25 + horas_150*self.precio_hora_bruto()*1.50))/self.horas_semana
         return precio_final
 
 #Funcion para introducir las horas por semana por teclado
@@ -48,7 +43,7 @@ def introducir_horas_semana():
 #Funcion para pedir al usuario el salario mensual bruto
 def introducir_sal_men_bruto():
     while True:
-        salario = input("Introduzca el salario mensua bruto: ")
+        salario = input("Introduzca el salario mensual bruto: ")
         try:
             salario = int(salario)
             salario > 0
@@ -67,5 +62,5 @@ if __name__ == "__main__":
 
     #Definimos resultado como una instancia de clase y hallamos los salarios
     resultado = Horas_Extra(salario_mensual_bruto, horas_semana)
-    print ("Su precio por hora bruto es: {}".format(resultado.precio_hora_bruto()))
-    print ("Su precio por hora remunerada es: {}".format(resultado.precio_hora_remunerada()))
+    print ("Su precio por hora bruto es: {}€".format(round(resultado.precio_hora_bruto(), 2)))
+    print ("Su precio por hora remunerado es: {}€".format(round(resultado.precio_hora_remunerada(), 2)))
