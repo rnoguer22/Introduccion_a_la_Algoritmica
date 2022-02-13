@@ -3,6 +3,19 @@
 #150% si x>43
 #Precio por hora bruto = salario mensual bruto x 12 / (horas por semana x52)
 
+#Funcion para calcular las horas extra de cada tipo
+def precio_horas_remuneradas(horas_semana):
+    r = []   #En esta lista se almacenaran las horas extra de cada tipo
+    if 36 <= horas_semana <= 43:
+        horas_extra_1 = horas_semana - 35
+        horas_extra_2 = 0
+    else:
+        horas_extra_1 = 8
+        horas_extra_2 = 43 - horas_semana
+    #Añadimos los resultados independientes a la lista
+    r.append(horas_extra_1, horas_extra_2)   
+    return r
+
 class Horas_Extra:
     #Constructor
     def __init__(self, sal_men_bruto, horas_semana):
