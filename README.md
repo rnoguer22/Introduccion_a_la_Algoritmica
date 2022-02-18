@@ -103,3 +103,40 @@ Algoritmo Area_Triangulo
 	
 FinAlgoritmo
 ```
+
+## Ejercicio 11
+### Salario y horas extra
+```
+Algoritmo horas_extra
+    // Establece la remuneración de `horas_ext' adicionales para
+    // salario mensual bruto de `salario_mensual_bruto'.
+	
+	//ENTRADA
+	Definir salario_mensual_bruto Como Real
+	Definir horas_ext Como Entero
+	Escribir "Introduzca el salario mensual bruto y las horas extra:"
+	Leer salario_mensual_bruto, horas_ext
+	
+	//Definimos las constantes
+	Definir HORAS_MAX_, HORAS_SEMANA, SEMANAS Como Entero
+	SEMANAS <- 52
+	HORAS_SEMANA <- 35
+	HORAS_MAX_ <- 8
+	
+	Definir PRECIO_1, PRECIO_2 Como Real
+	PRECIO_1 <- 1.25
+	PRECIO_2 <- 1.50
+	
+	//VARIABLES
+	//Estas variables nos van a almacenar la cantidad de horas extra con PRECIO_1 y PRECIO_2 respectivamente
+	Definir horas_ext_1, horas_ext_2 Como ENTERO
+	Definir precio_hora Como Real
+	
+	//REALIZACION
+    //Vamos a hallar el precio_hora de la remuneración bruta básica
+	precio_hora <- (salario_mensual_bruto*12)/(HORAS_SEMANA*SEMANAS)
+	//Ahora ya podemos calcular la remuneracion de las horas extra
+    Resultado <- precio_hora x (inf(horas_ext, CANTIDAD_HORAS_MAX_1) x PRECIO_1 + sup(horas_ext - CANTIDAD_HORAS_MAX_1, 0) x PRECIO_2)
+	
+fin Algoritmo
+```
