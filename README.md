@@ -140,3 +140,54 @@ Algoritmo horas_extra
 	
 fin Algoritmo
 ```
+
+## Ejercicio 12
+### Cuenta de deposito
+```
+Algoritmo cuenta_deposito
+	
+//Definimos las variables
+	Definir estado_cuenta, accion Como Caracter
+	Definir saldo, abono, retirada Como Real
+	
+//Entrada
+	Escribir "¿Desea abrir una cuenta bancaria?"
+	Leer estado_cuenta
+	
+//Realizacion
+//Primer condicional
+	Si estado_cuenta = "no" Entonces
+		Escribir "Esperamos que vuelva pronto"
+	SiNo
+		Si estado_cuenta = "si" Entonces
+			saldo = 0
+			Escribir "Introduzca el dinero a ingresar"
+			Leer abono
+			Escribir "Su saldo es la friolera de ", abono, " euros"
+		FinSi
+	FinSi
+	
+//Segundo condicional
+	Escribir "¿Desea consultar, retirar o ingresar dinero?"
+	Leer accion
+	Si accion = "no" Entonces
+		Escribir "Gracias, vuelva pronto"
+	SiNo
+		Si accion = "consultar" Entonces
+			Escribir "Dispone de ", saldo, " euros"
+		SiNo
+			Si accion = "retirar" Entonces
+				Escribir "Introduzca el dinero que desea retirar"
+				Leer retirada
+				Escribir "Dispone de ", retirada-saldo, " euros"
+			SiNo
+				Si accion = "ingresar" Entonces
+					Escribir "Introduzca el dinero a ingresar"
+					Leer abono
+					Escribir "Su saldo es la friolera de ", abono, " euros"
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+		
+FinAlgoritmo
