@@ -111,7 +111,7 @@ Algoritmo horas_extra
     // Establece la remuneración de `horas_ext' adicionales para
     // salario mensual bruto de `salario_mensual_bruto'.
 	
-	//ENTRADA
+//ENTRADA
 	Definir salario_mensual_bruto Como Real
 	Definir horas_ext Como Entero
 	Escribir "Introduzca el salario mensual bruto y las horas extra:"
@@ -127,13 +127,13 @@ Algoritmo horas_extra
 	PRECIO_1 <- 1.25
 	PRECIO_2 <- 1.50
 	
-	//VARIABLES
+//VARIABLES
 	//Estas variables nos van a almacenar la cantidad de horas extra con PRECIO_1 y PRECIO_2 respectivamente
 	Definir horas_ext_1, horas_ext_2 Como ENTERO
 	Definir precio_hora Como Real
 	
-	//REALIZACION
-    //Vamos a hallar el precio_hora de la remuneración bruta básica
+//REALIZACION
+    	//Vamos a hallar el precio_hora de la remuneración bruta básica
 	precio_hora <- (salario_mensual_bruto*12)/(HORAS_SEMANA*SEMANAS)
 	//Ahora ya podemos calcular la remuneracion de las horas extra
     Resultado <- precio_hora x (inf(horas_ext, CANTIDAD_HORAS_MAX_1) x PRECIO_1 + sup(horas_ext - CANTIDAD_HORAS_MAX_1, 0) x PRECIO_2)
