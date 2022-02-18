@@ -79,3 +79,27 @@ Algoritmo Media_Aritmetica_2
 	
 FinAlgoritmo
 ```
+
+## Ejercicio 10
+### Área del triángulo
+```
+Algoritmo Area_Triangulo
+	
+	//Definimos las variables
+	Definir lado, altura Como Real
+	
+	//Introducimos los datos por teclado
+	Escribir "Introduzca la medida del lado y la altura relativa a ese lado:"
+	Leer lado, altura
+	
+	//Calculamos el area
+	area = (lado*altura)/2
+	
+	//Mostramos el area por pantalla
+	Escribir "El area es ", area 
+	
+	//Si se trata de un triangulo rectangulo en el que nos dan la medida de los dos catetos, el area seria la misma
+	//Ya que un cateto seria el lado y el otro seria la altura
+	
+FinAlgoritmo
+```
