@@ -1,6 +1,6 @@
 # Introduccion_a_la_Algoritmica
 
-[Pincha aqui para acceder al link de este repositorio]
+[Pincha aqui para acceder al link de este repositorio](https://github.com/rnoguer22/Introduccion_a_la_Algoritmica.git)
 
 ##  Ejericicio 8
 ### Porcentajes, IVA e Inversiones
@@ -36,6 +36,46 @@ Algoritmo Porcentajes_IVA_Inversiones_2
 	
 	//Mostramos el resultado por pantalla
 	Escribir "El importe de interes de ", capital_invertido, " a un ", interes*100, "% durante ", meses, " meses es de ", importe_interes, " euros"
+	
+FinAlgoritmo
+```
+
+## Ejercicio 9
+### Media Aritmetica Ponderada
+#### Parte 1)
+```
+Algoritmo Media_Aritmetica_1
+	
+	//Introducimos las variables por teclado
+	Definir num1, num2, num3 Como Real
+	Escribir "Introduzca 3 numeros: "
+	Leer num1, num2, num3
+	
+	//Definimos la variable media_aritmetica que calcula la media aritmetica de los tres numeros introducidos por teclado
+	media_aritmetica = (num1+num2+num3)/3
+	
+	//Mostramos el resultado por pantalla
+	Escribir media_aritmetica
+	
+FinAlgoritmo
+```
+#### Parte 2)
+```
+Algoritmo Media_Aritmetica_2
+	
+	//Introducimos las variables por teclado
+	Definir num1, num2, num3 Como Real
+	Escribir "Introduzca 3 numeros: "
+	Leer num1, num2, num3
+	
+	//Definimos la variable media_aritmetica que calcula la media aritmetica de los tres numeros introducidos por teclado
+	media_aritmetica = (num1+num2+num3)/3
+	
+	//Definimos el parametro de ponderacion
+	ponderacion = 0.5
+	
+	//Mostramos el resultado por pantalla
+	Escribir media_aritmetica
 	
 FinAlgoritmo
 ```
